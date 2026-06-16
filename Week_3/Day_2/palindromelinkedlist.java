@@ -23,14 +23,14 @@ class Solution {
             prev = curr;
             curr = next;
         }
-        ListNode first = head;
-        ListNode second = prev;
-        while(second != null){
-            if(first.val != second.val){
+        ListNode p1 = head;
+        ListNode p2 = prev;
+        while(p2 != null){
+            if(p1.val != p2.val){
                 return false;
             }
-            first = first.next;
-            second = second.next;
+            p1 = p1.next;
+            p2 = p2.next;
         }
         return true;
     }
